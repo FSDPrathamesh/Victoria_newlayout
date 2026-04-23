@@ -209,15 +209,15 @@ button {
 }
 
 .project-col:nth-child(1):hover {
-  background-image: url("../New-Layout/assets/home/img-1.jpg");
+  background-image: url("./assets/home/img-1.jpg");
 }
 
 .project-col:nth-child(2):hover {
-  background-image: url("../New-Layout/assets/home/img-2.jpg");
+  background-image: url("./assets/home/img-2.jpg");
 }
 
 .project-col:nth-child(3):hover {
-  background-image: url("../New-Layout/assets/home/img-3.jpg");
+  background-image: url("./assets/home/img-3.jpg");
 }
 
 .project-col:hover {
