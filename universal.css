@@ -1,0 +1,473 @@
+/*==================== Victoria Enterprises Website 
+================================================== */
+
+:root {
+
+    /* Colors */
+    --text-primary: #1A4174;
+    --bg-primary: #FFFFFF;
+    --bg-sections: #EAEEF4;
+    /* --bg-danger: #E9292F; */
+    --para-text: #4B5563;
+    --bg-danger: #C81E1E;
+    --bg-dark: #010169;
+    --strong-black: #141415;
+    --bg-light-blue: #0D4ABC;
+    --bg-red-dark: #E9292F;
+
+    /* ---------- Font Family ---------- */
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: inherit;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    /* background-color: var(--bg-primary); */
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: var(--font-primary);
+}
+
+/* classes */
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ==============================
+   Responsive Headings (clamp)
+   ============================== */
+.h1,
+h1 {
+    font-size: clamp(26px, 4vw, 48px);
+    line-height: clamp(34px, 4.2vw, 58px);
+    font-weight: 600;
+}
+
+.h2,
+h2 {
+    font-size: clamp(24px, 4vw, 42px);
+    line-height: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+}
+
+.h3,
+h3 {
+    font-size: clamp(20px, 3.5vw, 28px);
+    line-height: clamp(28px, 3.8vw, 42px);
+    font-weight: 700;
+}
+
+.h4,
+h4 {
+    font-size: clamp(18px, 3vw, 24px);
+    line-height: clamp(26px, 3.4vw, 38px);
+    font-weight: 700;
+}
+
+.h5,
+h5 {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: clamp(24px, 3vw, 28px);
+    font-weight: 600;
+}
+
+.h6,
+h6 {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: clamp(22px, 2.6vw, 28px);
+    font-weight: 600;
+}
+
+
+/* Header sidebar hero section  */
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 70px;
+    color: var(--bg-primary);
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+/* TOP GRADIENT LINE */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 160px;
+}
+
+/* MENU */
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a {
+    color: var(--bg-primary);
+    text-decoration: none;
+}
+
+/* EACH ITEM */
+.menu ul li {
+    padding: 0 30px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+}
+
+.menu>ul>li>span,
+.menu>ul>li>a {
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+
+.menu>ul>li:hover>span,
+.menu>ul>li:hover>a {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.menu>ul>li:hover .arrow img {
+    opacity: 0.72;
+}
+
+.people-menu {
+    gap: 16px;
+    white-space: nowrap;
+}
+
+.has-dropdown {
+    position: relative;
+    gap: 10px;
+}
+
+/* Dropdown Arrow */
+.arrow {
+    display: flex;
+    align-items: center;
+}
+
+.arrow img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transform: translateY(1px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    min-width: 224px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    height: auto;
+    padding: 14px 18px;
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+}
+
+.has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dropdown-menu li:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dropdown-menu li:hover a {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* LAST ITEM RIGHT BORDER */
+.menu ul li:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* HAMBURGER BOX */
+.hamburger {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.22);
+    transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+    background: #000;
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transition: background 0.3s ease;
+}
+
+.hamburger:hover span {
+    background: #fff;
+}
+
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* DARK OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* SIDE MENU BASE */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    background: #f5f5f5;
+    transition: 0.4s ease;
+    z-index: 999;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ACTIVE STATE */
+.side-menu.active {
+    right: 0;
+}
+
+/* CONTENT */
+.side-menu-content {
+    padding: 50px 40px;
+    height: 100%;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* MENU ITEMS */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    font-size: 30px;
+    line-height: 1.3;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.side-menu-content ul {
+    flex-grow: 1;
+}
+
+.menu-footer {
+    margin-top: auto;
+}
+
+.side-menu-content {
+    padding: 50px 40px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-footer p {
+    color: gray;
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+
+/* BACKGROUND DIM */
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+
+/* open state */
+.dropdown.active .dropdown-menu {
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+/* dropdown items */
+.dropdown-menu li {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* arrow rotate animation */
+.dropdown .arrow {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+.side-dropdown-toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-arrow img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transform: translateY(1px);
+}
+
+/* dropdown hidden */
+.side-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* open */
+.side-dropdown.active .side-dropdown-menu {
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+/* arrow rotate */
+.side-arrow {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.side-dropdown.active .side-arrow {
+    transform: rotate(180deg);
+}
+
+/* style dropdown items */
+.side-dropdown-menu li {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.side-dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+}

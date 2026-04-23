@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victoria Enterprises</title>
+
+    <!-- Google font link  -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+
+    <!-- oswald  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="universal.css" />
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="assets/header_logo.png" alt="" />
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li class="has-dropdown">
+            <span>OUR VERTICALS</span>
+            <span class="arrow"
+              ><img src="assets/home/down-arrow.png" alt=""
+            /></span>
+            <ul class="dropdown-menu">
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Invest</a></li>
+              <li><a href="#">Foundation</a></li>
+            </ul>
+          </li>
+          <li><span>PROJECTS</span></li>
+          <li class="people-menu">
+            <span>OUR PEOPLE</span>
+            <span class="hamburger" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SIDE MENU OVERLAY -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-menu-content">
+        <span class="close-btn" id="closeMenu">&times;</span>
+
+        <ul>
+          <li>ABOUT US</li>
+          <li>OUR PEOPLE</li>
+          <li>PROJECTS</li>
+          <!-- DROPDOWN -->
+          <li class="side-dropdown">
+            <div class="side-dropdown-toggle">
+              OUR VERTICALS
+              <span class="side-arrow">
+                <img src="assets/home/down-arrow-black.png" alt="" />
+              </span>
+            </div>
+
+            <ul class="side-dropdown-menu">
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Invest</a></li>
+              <li><a href="#">Foundation</a></li>
+            </ul>
+          </li>
+          <li>BLOGS</li>
+          <li>CAREER</li>
+          <li>CONTACT US</li>
+        </ul>
+
+        <div class="menu-footer">
+          <p>AWARDS & RECOGNITION</p>
+          <p>NEWS & EVENTS</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero section  -->
+    <section class="hero">
+      <video autoplay muted loop controls playsinline class="bg-video">
+        <source src="assets/home/random.mp4" type="video/mp4" />
+      </video>
+
+      <div class="overlay"></div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="experience-section">
+      <div class="left-slider">
+        <div class="image-wrapper">
+          <div class="image-box active">
+            <img src="assets/home/img-1.jpg" alt="Project Image 1" />
+          </div>
+          <div class="image-box">
+            <img src="assets/home/img-2.jpg" alt="Project Image 2" />
+          </div>
+          <div class="image-box">
+            <img src="assets/home/img-3.jpg" alt="Project Image 3" />
+          </div>
+          <div class="image-box">
+            <img src="assets/home/img-4.jpg" alt="Project Image 4" />
+          </div>
+        </div>
+
+        <div class="left-box">
+          <span class="view-projects">View Projects</span>
+          <div class="counter-wrapper">
+            <svg class="progress-ring" width="60" height="60">
+              <circle
+                class="progress-ring-circle"
+                stroke="black"
+                stroke-width="2"
+                fill="transparent"
+                r="26"
+                cx="30"
+                cy="30"
+              />
+            </svg>
+            <div class="counter">1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <h2>EXPERIENCE THE PINNACLE OF GRANDEUR</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          architecto maiores in blanditiis tenetur officiis assumenda. Eligendi
+          quia ipsam, voluptatem commodi assumenda repellendus inventore
+          excepturi.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quas
+          nobis dolorum necessitatibus doloremque illo libero consequuntur id
+          hic incidunt molestiae expedita laborum quia voluptas rem rerum fuga
+          itaque eligendi sapiente, quae provident, iure non molestias! Id,
+          aspernatur. Distinctio, ipsa?
+        </p>
+
+        <button>Discover</button>
+      </div>
+    </section>
+    <!-- Projects section continued -->
+    <section class="projects-section">
+      <div class="project-col">
+        <h2>ALL<br />PROJECTS</h2>
+      </div>
+
+      <div class="project-col">
+        <h2>RESIDENTIAL</h2>
+      </div>
+
+      <div class="project-col">
+        <h2>COMMERCIAL</h2>
+      </div>
+    </section>
+
+    <!-- News Section  -->
+    <section class="news-section">
+      <div class="slider">
+        <!-- CARD 1 -->
+        <div class="slide active">
+          <img src="assets/home/award.jpg" alt="Award's and Recognition" />
+          <div class="overlay"></div>
+
+          <div class="top-tag">Celebrate Our Milestone Moments</div>
+          <h2>AWARDS & RECOGNITION</h2>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="slide">
+          <img src="assets/home/people.jpg" alt="Our People" />
+          <div class="overlay"></div>
+
+          <div class="top-tag">Meet the Master Minds</div>
+          <h2>OUR PEOPLE</h2>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="slide">
+          <img src="assets/home/news.jpg" alt="News and Events" />
+          <div class="overlay"></div>
+
+          <div class="top-tag">Explore Our Recent Events</div>
+          <h2>NEWS & EVENTS</h2>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="slide">
+          <img src="assets/home/foundation.jpg" alt="Foundation" />
+          <div class="overlay"></div>
+
+          <div class="top-tag">Explore Our Recent Events</div>
+          <h2>Victoria Enterprise Foundation</h2>
+        </div>
+      </div>
+
+      <!-- ARROWS -->
+      <!-- <button class="arrow left">‹</button>
+      <button class="arrow right">›</button> -->
+    </section>
+
+    <!-- Newspaper news section  -->
+    <section class="news-wrapper">
+      <!-- LEFT TITLE -->
+      <div class="news-left">
+        <h2>VICTORIA IN<br />NEWS</h2>
+      </div>
+
+      <!-- RIGHT CARDS -->
+      <div class="news-right">
+        <div class="news-card">
+          <div class="img-box">
+            <img src="img1.jpg" alt="" />
+            <span class="date">02.12.24</span>
+          </div>
+          <p>
+            Izdihar Real Estate Fund concludes sale of Emaar Business Park –
+            Building 3 in Dubai
+          </p>
+        </div>
+
+        <div class="news-card">
+          <div class="img-box">
+            <img src="img2.jpg" alt="" />
+            <span class="date">02.12.24</span>
+          </div>
+          <p>
+            Avighna buys Dubai commercial property from Bank Muscat's fund for
+            Rs 555 crore
+          </p>
+        </div>
+
+        <div class="news-card">
+          <div class="img-box">
+            <img src="img3.jpg" alt="" />
+            <span class="date">27.11.24</span>
+          </div>
+          <p>
+            Avighna Group buys Emaar Business Park in Dubai for Rs 5.55 billion
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- text section  -->
+    <section class="text-content">
+      <div class="text-wrapper">
+        <h2 class="text-head">
+          We Are Not Just a Luxury Development Company, We Are The Benchmark
+        </h2>
+        <p class="text-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nisi
+          consectetur fugiat? Labore voluptatem libero sequi exercitationem
+          dolore, animi, fuga quod molestias est reprehenderit omnis dolores cum
+          numquam nesciunt. Facere dignissimos amet accusantium voluptas ea
+          voluptate aliquid commodi similique distinctio perferendis? Magnam
+          placeat officia, reprehenderit amet saepe cumque nisi modi. Nulla,
+          possimus repellendus magni minima soluta numquam iure voluptas optio!
+        </p>
+        <span class="read-more">Read More</span>
+      </div>
+    </section>
+
+    <!-- Community section  -->
+    <section class="community">
+      <div class="section-heading">
+        <h2>JOIN THE COMMUNITY</h2>
+        <p>Follow us @victoriaenterprises</p>
+      </div>
+
+      <div class="community-images">
+        <div class="community-image-wrapper">
+          <div class="community-image-box">
+            <img src="assets/home/image1.jpg" alt="Instagram Image 1" />
+          </div>
+          <div class="community-image-box">
+            <img src="assets/home/image2.jpg" alt="Instagram Image 2" />
+          </div>
+          <div class="community-image-box">
+            <img src="assets/home/image3.jpg" alt="Instagram Image 3" />
+          </div>
+          <div class="community-image-box">
+            <img src="assets/home/image4.jpg" alt="Instagram Image 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- LEFT LINKS -->
+        <div class="footer-col">
+          <p>Disclaimer</p>
+          <p>Terms & Conditions</p>
+          <p>Statutory Document</p>
+        </div>
+
+        <!-- INDIA -->
+        <div class="footer-col">
+          <h4>India</h4>
+          <p>
+            Avighna House, 17th Floor, 82,<br />
+            Dr. Annie Besant Road, Worli,<br />
+            Mumbai - 400 018.
+          </p>
+          <p>+91 22 6900 7900</p>
+          <p>info@avighnagroup.com</p>
+
+          <div class="social">
+            <span>IG</span>
+            <span>IN</span>
+            <span>FB</span>
+          </div>
+        </div>
+
+        <!-- UAE -->
+        <div class="footer-col">
+          <h4>UAE</h4>
+          <p>
+            501, Emaar Business Park 3,<br />
+            Sheikh Zayed Road,<br />
+            Dubai
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- NEXT IMAGE SECTION -->
+    <section class="discover-section">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/home/random.mp4" type="video/mp4" />
+      </video>
+
+      <div class="discover-text">Victoria Enterprises</div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="universal.js"></script>
+  </body>
+</html>
