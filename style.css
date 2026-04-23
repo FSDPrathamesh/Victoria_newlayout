@@ -220,7 +220,7 @@ button {
   background-image: url("../New-Layout/assets/home/img-3.jpg");
 }
 
-.project-col:hover:hover {
+.project-col:hover {
   opacity: 1;
 }
 
